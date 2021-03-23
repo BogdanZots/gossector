@@ -1,0 +1,78 @@
+.aboutSmartbar {
+    width: 100%;
+    padding: 4rem 0;
+    @extend .section;
+    &__inner {
+        @extend .wrapper;
+    }
+    &__block {
+        width: 100%;
+        @extend .row;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        align-items: center;
+        @include mediaMin(501px) {
+            &:nth-child(2n + 1) {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: reverse;
+                flex-direction: row-reverse;
+            }
+        }
+        @include media(0, 500px) {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            -webkit-box-pack: start;
+            justify-content: flex-start;
+            -webkit-box-align: start;
+            align-items: flex-start;
+        }
+        &+& {
+            margin-top: 5rem;
+        }
+        &Item {
+            &._content {
+                width: 45%;
+                @include media(0, 500px) {
+                    width: 100%;
+                }
+            }
+            &._image {
+                width: 50%;
+                @include media(0, 500px) {
+                    width: 100%;
+                }
+            }
+        }
+        &Title {
+            max-width: 100%;
+            font-size: 6.8rem;
+            font-family: 'FirBlI';
+            color: $colorBlack;
+            margin-bottom: 1rem;
+        }
+        &SubTitle {
+            max-width: 100%;
+            font-size: 4rem;
+            line-height: 1.3;
+            font-family: 'FirBl';
+            color: $colorBlack;
+            margin-bottom: 2rem;
+        }
+        &Description {
+            max-width: 100%;
+            font-size: 2.2rem;
+            line-height: 1.3;
+            font-family: 'FirL';
+            color: $colorBlack;
+            &+& {
+                margin-top: 2rem;
+            }
+        }
+        &Image {
+            width: 100%;
+            margin-top: 3rem;
+        }
+    }
+}

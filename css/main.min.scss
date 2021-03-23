@@ -1,0 +1,307 @@
+$colorBlack:#1a1a1a;
+$colorRed: #cc151d;
+$colorCaseTaxi: #00e06f;
+$colorCaseTaxiLight: #00ff7d;
+$colorCaseGdeConcert: #ffeb3b;
+$colorCaseShopZilla: #fed739;
+$colorCaseQrGate: #315FF2;
+$colorCaseCasuarn: #B73573;
+$colorCaseQb:#00A19B;
+$colorCaseLeaps:#20d7ff;
+$widthContentCasuarn: 113rem;
+$heightMenu:11rem;
+@import "fonts";
+@import "reset";
+@import "body";
+.COLORTEXT {
+    &._dark {
+        color: $colorBlack;
+        & * {
+            color: $colorBlack;
+        }
+    }
+    &._light {
+        color: #fff;
+        & * {
+            color: #fff;
+        }
+    }
+    &._shopZilla {
+        color: $colorCaseShopZilla;
+    }
+    &._darkCasuarn {
+        color: #272D3E;
+        & * {
+            color: #272D3E;
+        }
+    }
+    &._darkQb {
+        color: #333;
+        & * {
+            color: #333;
+        }
+    }
+}
+
+img:not([class]) {
+    max-width: 100%;
+    margin: 1rem;
+    @include media(0, 500px) {
+        width: 100%!important;
+        height: auto!important;
+    }
+}
+
+img:not([class])._left {
+    margin: 0 2rem 2rem 0;
+}
+
+img:not([class])._right {
+    margin: 0 2rem 0 2rem;
+}
+
+p:not([class]) {
+    font-family: 'FirL';
+    font-size: 2.3rem;
+    line-height: 1.3;
+}
+
+s:not([class]),
+strike:not([class]) {
+    font-family: 'FirL';
+    font-size: 2.3rem;
+    line-height: 1.3;
+    text-decoration: line-through;
+}
+
+p:not([class])+p:not([class]),
+p:not([class])+ul:not([class]),
+ul:not([class])+p:not([class]),
+p:not([class])+ol:not([class]),
+ol:not([class])+p:not([class]) {
+    margin-top: 2rem;
+}
+
+b:not([class]) {
+    font-family: 'FirB';
+}
+
+i:not([class]) {
+    font-family: 'FirLI';
+}
+
+h1:not([class]) {
+    font-size: 5rem;
+    font-family: 'FirB';
+}
+
+h2:not([class]) {
+    font-size: 4.5rem;
+    font-family: 'FirB';
+}
+
+h3:not([class]) {
+    font-size: 4rem;
+    font-family: 'FirB';
+}
+
+h4:not([class]) {
+    font-size: 3.5rem;
+    font-family: 'FirB';
+}
+
+h5:not([class]) {
+    font-size: 3rem;
+    font-family: 'FirB';
+}
+
+li:not([class]) {
+    font-size: 2.3rem;
+    font-family: 'FirL';
+}
+
+ol:not([class]) {
+    counter-reset: list;
+}
+
+ol:not([class])>li:not([class]) {
+    position: relative;
+    padding-left: 2rem;
+    counter-increment: list;
+    &::before {
+        content: counter(list)".";
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 2.3rem;
+        font-family: 'FirL';
+    }
+}
+
+ul:not([class])>li:not([class]) {
+    position: relative;
+    padding-left: 2rem;
+    &::before {
+        content: "•";
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 2.3rem;
+        font-family: 'FirL';
+    }
+}
+
+li:not([class])+li:not([class]) {
+    margin-top: 2rem;
+}
+
+blockquote:not([class]) {
+    font-size: 2.3rem;
+    line-height: 1.5;
+    font-family: 'FirL';
+    color: $colorBlack;
+    padding-left: 4rem;
+    position: relative;
+    margin: 3rem 0;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        left: 0;
+        width: 0.5rem;
+        height: calc(100% + 1rem);
+        background: $colorRed;
+    }
+}
+.nomargin{
+    margin: 0 !important;
+}
+.pb8{
+    padding-bottom: 8rem;
+}
+@import"menuNew";			 
+@import "inputBox";
+@import "menu";
+@import "button";
+@import "header";
+@import "titleMain";
+@import "titleMedium";
+@import "sectionInfo";
+@import "infoBox";
+@import "sectionStartup";
+@import "titlePage";
+@import "textMedium";
+@import "textMain";
+@import "sectionTeam";
+@import "sectionTechno";
+@import "sectionProcess";
+@import "sectionPortfolio";
+@import "sectionPrice";
+@import "priceBox";
+@import "footer";
+@import "input";
+@import "formBox";
+@import "selectBox";
+@import "navBox";
+@import "loader";
+@import "load";
+@import "quizBox";
+@import "sectionGdeConcertHeader";
+@import "sectionCaseInfo";
+@import "sectionCaseService";
+@import "sectionCaseIdea";
+@import "sectionCaseHow";
+@import "sectionCaseQuote";
+@import "sectionCaseAbout";
+@import "sectionCaseFooter";
+@import "sectionCaseMenu";
+@import "sectionCaseHeader";
+@import "sectionTaxiInfo";
+@import "sectionTaxiHistory";
+@import "titleCase";
+@import "buttonCase";
+@import "sectionTaxiPresentation";
+@import "sectionTaxiAbout";
+@import "sectionTaxiOffer";
+@import "sectionTaxiFeedback";
+@import "sectionCaseMore";
+@import "sectionCaseUp";
+@import "sectionShopZillaInfo";
+@import "sectionShopZillaWork";
+@import "sectionShopZillaService";
+@import "sectionBlogFilter";
+@import "sectionBlogNews";
+@import "blogCard";
+@import "titleBlog";
+@import "sectionBlogForm";
+@import "sectionBlogMore";
+@import "caseInfo";
+@import "sectionBlogHead";
+@import "sectionBlogContent";
+@import "shareBox";
+@import "sectionQrGateHeader";
+@import "sectionQrGateAbout";
+@import "sectionQrGateTechnology";
+@import "sectionQrGateInfo";
+@import "sectionQrGateLanguage";
+@import "section404";
+@import "sectionRopaHeader";
+@import "sectionRopaOffer";
+@import "titleRopa";
+@import "sectionRopaInfo";
+@import "sectionRopaAbout";
+@import "sectionRopaProcess";
+@import "sectionRopaResult";
+@import "sectionRopaStructure";
+@import "sectionRopaPresent";
+@import "sectionCasuarnAbout";
+@import "sectionCasuarnQuote";
+@import "sectionCasuarnTarget";
+@import "sectionCasuarnAdvantage";
+@import "sectionCasuarnWork";
+@import "sectionCasuarnLogic";
+@import "sectionCasuarnServices";
+@import "sectionTeamHeader";
+@import "sectionTeamContent";
+@import "sectionQbHeader";
+@import "sectionQbAbout";
+@import "sectionQbInfo";
+@import "sectionQbTarget";
+@import "sectionQbCabinet";
+@import "menuNew";
+@import "sectionLeapsHeader";
+@import "sectionLeapsWhy";
+@import "sectionLeapsAbout";
+@import "sectionLeapsPerspective";
+@import "sectionLeapsSave";
+@import "expHeader";
+@import "expHistory";
+@import "link";
+@import "expMedia";
+@import "mediaCard";
+@import "expVacancy";
+@import "vacancyCard";
+@import "expCaseHeader";
+@import "expCaseQuotes";
+@import "historyContent";
+@import "historyGoals";
+@import "vacancyCase";
+@import "headerSmartbar";
+@import "tasksSmartbar";
+@import "decisionsSmartbar";
+@import "contentSmartbar";
+@import "aboutSmartbar";
+@import "advantagesSmartbar";
+@import "workSmartbar";
+@import "whiteLabelHeader";
+@import "whiteLabelHelp";
+@import "whiteLabelScheme";
+@import "whiteLabelAbout";
+@import "whiteLabelInfo";
+@import "whiteLabelFeedbacks";
+@import "projects";
+@import "videoPopup";
+@import "mediaCard";

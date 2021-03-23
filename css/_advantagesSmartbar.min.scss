@@ -1,0 +1,204 @@
+.advantagesSmartbar {
+    width: 100%;
+    padding: 6rem 0 12rem 0;
+    @extend .section;
+    position: relative;
+    z-index: 2;
+    @include media(0, 500px) {
+        overflow: hidden;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -9rem;
+        left: 0;
+        width: 100%;
+        height: 40rem;
+        z-index: -1;
+        @include bg('/img/smartbar/advantages-back.png', contain, center bottom);
+        @include media(0, 500px) {
+            bottom: 3rem;
+            left: 50%;
+            -webkit-transform: translate(-50%, 0);
+            -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+            width: 200vw;
+        }
+    }
+    &__inner {
+        @extend .wrapper;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+    &__title {
+        max-width: 100%;
+        text-align: center;
+        font-size: 7rem;
+        font-family: 'FirBlI';
+        color: $colorBlack;
+        margin-bottom: 11rem;
+    }
+    &__items {
+        width: 100%;
+    }
+    &__item {
+        width: 100%;
+        @extend .row;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        @include media(0, 500px) {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            -webkit-box-pack: start;
+            justify-content: flex-start;
+        }
+        &+& {
+            margin-top: 6rem;
+        }
+        &Block {
+            &._content {
+                width: 45%;
+                padding-left: 9rem;
+                position: relative;
+                @include media(0, 500px) {
+                    width: 100%;
+                    padding-left: 6rem;
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 4rem;
+                    height: 4rem;
+                    @include bg('/img/smartbar/star-icon.svg', contain, center);
+                }
+            }
+            &._image {
+                width: 50%;
+                position: relative;
+                @include media(0, 500px) {
+                    width: 100%;
+                    margin-top: 3rem;
+                }
+            }
+        }
+        &Title {
+            max-width: 100%;
+            font-size: 4rem;
+            font-family: 'FirBl';
+            color: $colorBlack;
+            margin-bottom: 2rem;
+        }
+        &SubTitle {
+            max-width: 100%;
+            font-size: 2rem;
+            font-family: 'FirBl';
+            color: #DC3027;
+            margin-bottom: 2rem;
+            @include media(0, 500px) {
+                font-size: 2.4rem;
+            }
+        }
+        &Description {
+            max-width: 100%;
+            font-size: 2.1rem;
+            line-height: 1.5;
+            font-family: 'FirL';
+            color: $colorBlack;
+        }
+        &Image {
+            width: calc(100% + 3rem);
+            -webkit-transform: translate(3rem, -2rem);
+            -ms-transform: translate(3rem, -2rem);
+            transform: translate(3rem, -2rem);
+            @include media(0, 500px) {
+                width: calc(100% + 1rem);
+                -webkit-transform: translate(0, -2rem);
+                -ms-transform: translate(0, -2rem);
+                transform: translate(0, -2rem);
+            }
+        }
+        &List {
+            width: 100%;
+            &Item {
+                width: 100%;
+                font-size: 2rem;
+                line-height: 1.5;
+                font-family: 'FirL';
+                color: $colorBlack;
+                padding-left: 3rem;
+                position: relative;
+                &::before {
+                    content: "•";
+                    position: absolute;
+                    top: -.5rem;
+                    left: 0;
+                    font-size: 3rem;
+                    font-family: 'FirB';
+                    color: #0AAC3C;
+                }
+                &+& {
+                    margin-top: 2rem;
+                }
+            }
+        }
+        &Cashback {
+            position: absolute;
+            top: -5rem;
+            right: 2.5rem;
+            background: #0AAC3C;
+            padding: 2rem 2rem 2rem 10rem;
+            border-radius: .8rem;
+            width: 30rem;
+            overflow: hidden;
+            z-index: 2;
+            @include media(0, 500px) {
+                display: none;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 9rem;
+                height: 100%;
+                @include bg('/img/smartbar/cashback-icon.png', contain, left bottom);
+            }
+            &Title {
+                max-width: 100%;
+                font-size: 1.4rem;
+                line-height: 1.5;
+                font-family: 'FirB';
+                color: #fff;
+                margin-bottom: 1rem;
+            }
+            &Description {
+                max-width: 100%;
+                font-size: 1.1rem;
+                line-height: 1.4;
+                font-family: 'FirL';
+                color: #fff;
+            }
+        }
+        &Subscribe {
+            position: absolute;
+            left: 10rem;
+            bottom: 5rem;
+            background: #fff;
+            z-index: 2;
+            border-radius: 1.4rem;
+            padding: 1.8rem 3rem;
+            font-size: 1.4rem;
+            line-height: 1.5;
+            font-family: 'FirB';
+            color: $colorBlack;
+            background: #CDF4DE;
+            width: 32rem;
+            @include media(0, 500px) {
+                display: none;
+            }
+        }
+    }
+}
