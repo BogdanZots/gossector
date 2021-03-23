@@ -1,3 +1,3 @@
 # gossector
 https://bogdanzots.github.io/gossector/
-Just a part from bit project
+Just a part from big project
